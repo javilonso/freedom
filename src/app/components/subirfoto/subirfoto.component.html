@@ -1,0 +1,9 @@
+
+<h1>Verificación con DNI</h1>
+<h5 class="card-title">Seleccione el fichero</h5>
+
+<input type="file" (change)="upload($event)" accept=".png,.jpg,.jpeg" />
+<br>
+Si su documento DNI no coincide con el número de DNI o fecha de nacimiento, su cuenta será cancelada.
+
+<button [ngClass]="((image==null)?'borrar':'aparecer')" mat-stroked-button (click)="subirfoto()" style="margin-top: 40px;">Finalizar</button>

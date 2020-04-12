@@ -1,0 +1,84 @@
+<div class="titulo">Mi perfil:</div>
+
+
+<div class="container">
+    <div class="item">
+        <div class="container2">
+            <div class="item">
+                <img class="foto" src={{user.photoURL}} alt="profile">
+            </div>
+            <div class="item">
+                <mat-form-field>
+                    <mat-label>Foto de perfil (URL):</mat-label>
+                    <input matInput placeholder="www.imgbd.com/i3jd.jpg" [(ngModel)]="user.photoURL">
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+    
+    <div class="item">
+        <div class="container2">
+            <div class="item">
+                <mat-form-field>
+                    <mat-label>Nombre completo:</mat-label>
+                    <input matInput placeholder="Paco Antonio" [(ngModel)]="user.displayName">        
+                </mat-form-field>
+            </div>
+
+            <div class="item">
+                <mat-form-field>
+                    <mat-label>Email de usuario:</mat-label>
+                    <input matInput placeholder="paco@gmail.com" [(ngModel)]="user.email" disabled>        
+                </mat-form-field>
+            </div>
+            
+        </div>
+    </div>
+
+    <span class="spacer"></span>
+    
+    <div class="item">
+        <div class="container2">
+            <div class="item">
+                <mat-form-field>
+                    <input matInput placeholder="Fecha Nacimiento" [(ngModel)]="fecha" disabled>        
+
+                </mat-form-field>
+            </div>
+
+            <div class="item">
+                <mat-form-field>
+                    <mat-label>Ciudad de residencia:</mat-label>
+                    <input matInput placeholder="Madrid" [(ngModel)]="user.city">        
+                </mat-form-field>
+            </div>
+            
+            <div class="item">
+                <mat-form-field appearance="fill">
+                    <mat-label>Teléfono:</mat-label>
+                    <input matInput placeholder="XXXXXXXXX" type="text" [(ngModel)]="user.mobilephone" pattern="^\(?[\d]{3}\)?[\d]{3}[\s-]?[\d]{3}$">
+                </mat-form-field>
+            </div>
+
+            <div class="item">
+                <mat-form-field appearance="fill">
+                    <mat-label>DNI:</mat-label>
+                    <input matInput placeholder="XXXXXXXXX" type="text" [(ngModel)]="user.dni">
+                </mat-form-field>
+            </div>
+            
+        </div>
+        *Los cambios se harán efectivos trás volver a hacer log in
+
+    </div>
+
+</div>
+
+
+<div class="container">
+    <button mat-raised-button color="primary" (click)='saveChanges()'>Guardar Cambios</button>
+    <button mat-raised-button (click)='nav()'>Cancelar</button>
+</div>
+
+
+

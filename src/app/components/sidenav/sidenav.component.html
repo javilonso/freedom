@@ -1,0 +1,66 @@
+<mat-sidenav-container class="contenido">
+    <!-- Barra lateral -->
+    <!-- <mat-sidenav mode={{mode_sidenav}}  [(opened)]="opened"> -->
+    <mat-sidenav #snav mode={{mode_sidenav}} [(opened)]="opened">
+        <div class="navcontainer">
+            <a mat-raised-button (click)="redirectActividad()" class="nueva_actividad"> 
+                <img src="../../../assets/mas.svg" style="inset-block:initial; margin-right: 10px;" width="50" height="50" alt="logo">
+               <u>Crear actividad</u> 
+            </a>
+            <a mat-raised-button  class="navitem" (click)="redirectAct()"> 
+                <img src="../../../assets/search1.svg" style="inset-block:initial; margin:10px;" width="30" height="30" alt="logo">
+                Buscar actividades
+            </a>
+            <a mat-raised-button  class="navitem" (click)="redirectActCreada()"> 
+                <img src="../../../assets/edit1.svg" style="inset-block:initial; margin:10px;" width="30" height="30" alt="logo">
+                Actividades creadas
+            </a>
+            <a mat-raised-button  class="navitem" (click)="redirectActProxima()"> 
+                <img src="../../../assets/schedule.svg" style="inset-block:initial; margin:10px;" width="30" height="30" alt="logo">
+               Próximas actividades
+            </a>
+            <a mat-raised-button  class="navitem" (click)="redirectActCompleta()"> 
+                <img src="../../../assets/finish.svg" style="inset-block:initial;" width="30" height="30" alt="logo">
+                Actividades completadas
+            </a>
+        </div>
+
+
+        <div class="user_exit2" style="font-size: medium; color: white; margin-top: 50px;">
+            <span *ngIf="nombreuser">Hola {{nombreuser}}!</span> &nbsp;&nbsp;
+            </div>
+
+        <div class="user_exit user_exit2">
+            
+            <div class="foto" matTooltip="Perfil" (click)="redirectProfile()">
+                <img style="border-radius: 50%;" src="{{photouser}}" height="50" width="50" [ngClass]="((photouser==null)?'ocultar':'aparecer')">
+                <img style="border-radius: 50%;" src="../../../assets/profile.png" height="50"  [ngClass]="((photouser==null)?'aparecer':'ocultar')">  
+            </div>
+            <button (click)="logout()" mat-icon-button style="margin: 0px 1%" matTooltip="Salir">
+                <i class="material-icons">logout</i>
+            </button>
+            
+        </div>
+
+
+    </mat-sidenav>
+
+    <!-- Contenido principal -->
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+
+    <!-- MENU FILTRAR -->
+    <!-- <mat-sidenav #snav mode="" [(opened)]="opened" position="end">
+        <mat-form-field>
+        <mat-label>Deportes</mat-label>
+        <mat-select>
+            <mat-option></mat-option>
+            <mat-option value="option1">Futbol</mat-option>
+            <mat-option value="option2">Baloncesto</mat-option>
+            <mat-option value="option3">Running</mat-option>
+        </mat-select>
+        </mat-form-field>
+    </mat-sidenav> -->
+
+</mat-sidenav-container>
