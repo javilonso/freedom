@@ -9,7 +9,7 @@
 
     <div class="foto" style="margin:20px 3%">
         <a routerLink="/principal"> 
-        <img class="freedomlogo" src="../../../assets/logo3.png" style="inset-block:initial;" alt="logo">
+        <img class="freedomlogo" src="assets/logo3.png" style="inset-block:initial;" alt="logo">
     </a>
     </div>
 
@@ -22,7 +22,7 @@
             </div>
             <div class="perfil" matTooltip="Perfil" style="width: 60px;" (click)="redirectProfile()">
                 <img style="border-radius: 50%;" src="{{photouser}}" height="50" width="50" [ngClass]="((photouser=='')?'ocultar':'aparecer')">
-                 <img style="border-radius: 50%;" src="../../../assets/profile.png" height="50"  [ngClass]="((photouser==null)?'aparecer':'ocultar')">  
+                 <img style="border-radius: 50%;" src="assets/profile.png" height="50"  [ngClass]="((photouser==null)?'aparecer':'ocultar')">  
             </div>
             <button (click)="logout()" mat-icon-button style="margin: 0px 1%" matTooltip="Salir">
                 <i class="material-icons">logout</i>
