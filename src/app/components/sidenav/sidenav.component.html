@@ -3,7 +3,7 @@
     <mat-sidenav #snav mode={{mode_sidenav}} [(opened)]="opened">
         <div class="navcontainer">
             <a mat-raised-button (click)="redirectActividad()" class="nueva_actividad"> 
-                <img src="../../../assets/mas.svg" style="inset-block:initial; margin-right: 10px;" width="50" height="50" alt="logo">
+                <img src="./assets/mas.svg" style="inset-block:initial; margin-right: 10px;" width="50" height="50" alt="logo">
                <u>Crear actividad</u> 
             </a>
             <a mat-raised-button  class="navitem" (click)="redirectPts()"> 
@@ -16,23 +16,23 @@
                 </div>    
             </a>
             <a mat-raised-button  class="navitem" (click)="redirectAct()"> 
-                <img src="../../../assets/search1.svg" style="inset-block:initial; margin:10px;" width="30" height="30" alt="logo">
+                <img src="./assets/search1.svg" style="inset-block:initial; margin:10px;" width="30" height="30" alt="logo">
                 Buscar actividades
             </a>
             <a mat-raised-button  class="navitem" (click)="redirectContacts()"> 
-                <img src="../../../assets/equipo.svg" style="inset-block:initial; margin:10px;" width="30" height="30" alt="logo">
+                <img src="./assets/equipo.svg" style="inset-block:initial; margin:10px;" width="30" height="30" alt="logo">
                 Usuarios de Freedom
             </a>
             <a mat-raised-button  class="navitem" (click)="redirectActCreada()"> 
-                <img src="../../../assets/edit1.svg" style="inset-block:initial; margin:10px;" width="30" height="30" alt="logo">
+                <img src="./assets/edit1.svg" style="inset-block:initial; margin:10px;" width="30" height="30" alt="logo">
                 Actividades creadas
             </a>
             <a mat-raised-button  class="navitem" (click)="redirectActProxima()"> 
-                <img src="../../../assets/schedule.svg" style="inset-block:initial; margin:10px;" width="30" height="30" alt="logo">
+                <img src="./assets/schedule.svg" style="inset-block:initial; margin:10px;" width="30" height="30" alt="logo">
                Próximas actividades
             </a>
             <a mat-raised-button  class="navitem" (click)="redirectActCompleta()"> 
-                <img src="../../../assets/finish.svg" style="inset-block:initial;" width="30" height="30" alt="logo">
+                <img src="./assets/finish.svg" style="inset-block:initial;" width="30" height="30" alt="logo">
                 Actividades completadas
             </a>
         </div>
@@ -47,7 +47,7 @@
             <div class="foto" matTooltip="Perfil" (click)="redirectProfile()">
                 <div class="parent" style="position: relative;">
                     <img style="border-radius: 50%;" src="{{photouser}}" height="45" width="45" [ngClass]="((photouser=='')?'ocultar':'aparecer')">
-                    <img style="border-radius: 50%;" src="../../../assets/profile.png" height="50"  [ngClass]="((photouser==null)?'aparecer':'ocultar')">  
+                    <img style="border-radius: 50%;" src="./assets/profile.png" height="50"  [ngClass]="((photouser==null)?'aparecer':'ocultar')">  
                     <img style="border-radius: 50%; position: absolute; top: 50%; left: 50%;" src="{{medallauser}}" height="24" width="24">
                 </div>                
                 
