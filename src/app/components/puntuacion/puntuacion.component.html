@@ -1,0 +1,81 @@
+<div class="titulo">Mi puntuación</div>
+
+<div class="container">
+    <div class="item">
+        <div class="progressbar">
+            <div class="outer">
+                <span class="puntos">{{mispuntos}}/2000 puntos</span>
+            </div>
+            <div class="outer">
+                <mat-progress-bar class="mat-progress-bar" value="{{pintarpuntos}}" mode="determinate" color="warn">
+                </mat-progress-bar>
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+
+<div class="titulo">Medallas: </div>
+<div class="container">
+    <div class="item2">
+        <div class="fotoouter">
+            <img class="foto" src="/assets//medal1.svg">
+        </div>
+        <div class="name">
+            <p>Novato</p>
+        </div>
+        <div class="citytel">
+            <p>Acabas de llegar a Freedom, empieza a participar!</p>
+            <p>0 pts</p>
+        </div>
+    </div>
+    <div class="item2">
+        <div class="fotoouter">
+            <img [ngClass]="((medal2())?'foto':'fotodim')" src="/assets//medal2.svg">
+            <i *ngIf="!medal2()"class="material-icons">lock_outline</i>
+        </div>
+        <div class="name">
+            <p>Intermedio</p>
+        </div>
+        <div class="citytel">
+            <p>Vas por el buen camino, sigue participando!</p>
+            <p>600 pts</p>
+        </div>
+    </div>
+    <div class="item2">
+        <div class="fotoouter">
+            <img [ngClass]="((medal3())?'foto':'fotodim')" src="/assets//medal3.svg">
+            <i *ngIf="!medal3()"class="material-icons">lock_outline</i>
+        </div>
+        <div class="name">
+            <p>Pro</p>
+        </div>
+        <div class="citytel">
+            <p>Eres todo un deportista, puedo llamarte fuertaco?</p>
+            <p>1200 pts</p>
+        </div>
+    </div>
+    <div class="item2">
+        <div class="fotoouter">
+            <img [ngClass]="((medal4())?'foto':'fotodim')" src="/assets//medal4.svg">
+            <i *ngIf="!medal4()"class="material-icons">lock_outline</i>
+        </div>
+        <div class="name">
+            <p>Leyenda</p>
+        </div>
+        <div class="citytel">
+            <p>Has hecho hecho de Freedom tu segunda familia, felicidades!</p>
+            <p>2000 pts</p>
+        </div>
+    </div>
+</div>
+
+<div class="titulo">Instrucciones: </div>
+<div class="container">
+    <div class="item">
+        <div class="textdesc">- Consigue 50 puntos por cada actividad que creas</div>
+        <div class="textdesc">- Consigue 40 puntos por cada actividad a la que te unes</div>
+    </div>
+</div>
+<br>

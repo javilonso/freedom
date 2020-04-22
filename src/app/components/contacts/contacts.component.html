@@ -1,0 +1,24 @@
+<div class="titulo">Usuarios registrados:</div>
+
+<div class="container">
+    <div class="item" *ngFor="let person of users">
+        
+        <div class="foto" style="position: relative;">
+            <img class="round" src='{{person.photoURL}}' style="width: 75px;height: 75px;border-radius: 50%;">
+                <img style="border-radius: 50%; position: absolute; top: 60%; left: 55%;" src="/assets//medal1.svg" height="35" width="35" [ngClass]="((person.puntos < 600)?'aparecer':'ocultar')">
+                <img style="border-radius: 50%; position: absolute; top: 60%; left: 55%;" src="/assets//medal2.svg" height="35" width="35" [ngClass]="(((person.puntos > 599) && person.puntos < 1200)?'aparecer':'ocultar')">
+                <img style="border-radius: 50%; position: absolute; top: 60%; left: 55%;" src="/assets//medal3.svg" height="35" width="35" [ngClass]="((person.puntos > 1199)?'aparecer':'ocultar')">
+                <img style="border-radius: 50%; position: absolute; top: 60%; left: 55%;" src="/assets//medal4.svg" height="35" width="35" [ngClass]="((person.puntos >1999)?'aparecer':'ocultar')">
+        </div>
+        
+        <div class="name">
+            <p><button mat-raised-button class="button" (click)="mandarInvitacion(person.displayName, person.email)"> INVITAR </button></p>
+            <p>{{person.displayName}}</p>
+        </div>
+        <div class="citytel">
+            <p>{{person.city | uppercase}}</p>
+        </div>
+    
+    </div>
+</div>
+

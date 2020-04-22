@@ -1,0 +1,59 @@
+.allheader{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1001; 
+}
+.user_exit{
+  display: flex;
+  margin-top: 5px;
+}
+.foto {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+ 
+ .perfil {
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ 
+ .mat-toolbar.mat-primary {
+   background: #09478a;
+   color: #fff;
+ }
+
+ @media screen and (max-width: 767px) {
+    .user_exit{
+      display: none;
+    }
+  }
+
+
+ @media screen and (max-width: 340px) {
+
+   .user_exit{
+     display: none;
+   }
+ }
+
+ .ocultar{
+   display: none;
+ }
+ .aparecer{
+   display: ruby;
+ }
+
+ ::ng-deep .iconbutton{
+   width:20px !important;
+ }
+
+
+  .freedomlogo{
+    width: calc(180px + (180 - 80) * ((100vw - 300px) / (1600 - 300)));;
+    height: calc(33px + (33 - 20) * ((100vw - 300px) / (1600 - 300)));
+    padding-top: 5px;
+  }

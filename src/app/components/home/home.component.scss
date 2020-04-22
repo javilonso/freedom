@@ -1,0 +1,50 @@
+.backgr {
+  /* The image used */
+  background-image: url("/assets/city.jpeg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mat-toolbar {
+    background-color: rgba($color: #1a1a1a, $alpha: 0.3);
+}
+
+.imgbox {
+    display: flex;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+}
+
+.center-fit {
+    max-width: 95%;
+    max-height: 100vh;
+    margin: auto;
+}
+
+.caption {
+    background-color: rgba($color: #ffffff, $alpha: 0.3);
+    padding: 3%;
+    font-size: 300%;
+    font-weight: bold;
+    letter-spacing: 20px;
+    border-radius: 3rem;
+    text-align: center;
+    vertical-align: center;
+    max-width: 50%;
+    margin: auto;
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    line-height:1.4em;
+
+    
+}

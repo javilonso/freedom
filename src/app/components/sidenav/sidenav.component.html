@@ -1,0 +1,70 @@
+<mat-sidenav-container class="contenido" fullscreen>
+    <!-- Barra lateral -->
+    <mat-sidenav #snav mode={{mode_sidenav}} [(opened)]="opened">
+        <div class="navcontainer">
+            <a mat-raised-button (click)="redirectActividad()" class="nueva_actividad"> 
+                <img src="/assets/mas.svg" style="inset-block:initial; margin-right: 10px;" width="50" height="50" alt="logo">
+               <u>Crear actividad</u> 
+            </a>
+            <a mat-raised-button  class="navitem" (click)="redirectPts()"> 
+                <div style="width: 50px; text-align: center; float: left; margin-top: 7px; margin-right: 15px;">                
+                    <img src="{{medallauser}}" width="40" height="40" alt="logo">
+                </div> 
+                <div style=" width: 131px; text-align: center; float:right;"> <span>{{mispuntos}}/2000 puntos</span>
+                    <mat-progress-bar style="height: 12px; width: 130px; border-radius: 10px;" mode="determinate" value="{{pintarpuntos}}" color="warn">
+                    </mat-progress-bar>
+                </div>    
+            </a>
+            <a mat-raised-button  class="navitem" (click)="redirectAct()"> 
+                <img src="/assets/search1.svg" style="inset-block:initial; margin:10px;" width="30" height="30" alt="logo">
+                Buscar actividades
+            </a>
+            <a mat-raised-button  class="navitem" (click)="redirectContacts()"> 
+                <img src="/assets/equipo.svg" style="inset-block:initial; margin:10px;" width="30" height="30" alt="logo">
+                Usuarios de Freedom
+            </a>
+            <a mat-raised-button  class="navitem" (click)="redirectActCreada()"> 
+                <img src="/assets/edit1.svg" style="inset-block:initial; margin:10px;" width="30" height="30" alt="logo">
+                Actividades creadas
+            </a>
+            <a mat-raised-button  class="navitem" (click)="redirectActProxima()"> 
+                <img src="/assets/schedule.svg" style="inset-block:initial; margin:10px;" width="30" height="30" alt="logo">
+               Próximas actividades
+            </a>
+            <a mat-raised-button  class="navitem" (click)="redirectActCompleta()"> 
+                <img src="/assets/finish.svg" style="inset-block:initial;" width="30" height="30" alt="logo">
+                Actividades completadas
+            </a>
+        </div>
+
+
+        <div class="user_exit2" style="font-size: medium; color: white; margin-top: 10px;">
+            <span *ngIf="nombreuser">Hola {{nombreuser}}!</span> &nbsp;&nbsp;
+            </div>
+
+        <div class="user_exit user_exit2">
+            
+            <div class="foto" matTooltip="Perfil" (click)="redirectProfile()">
+                <div class="parent" style="position: relative;">
+                    <img style="border-radius: 50%;" src="{{photouser}}" height="45" width="45" [ngClass]="((photouser=='')?'ocultar':'aparecer')">
+                    <img style="border-radius: 50%;" src="/assets/profile.png" height="50"  [ngClass]="((photouser==null)?'aparecer':'ocultar')">  
+                    <img style="border-radius: 50%; position: absolute; top: 50%; left: 50%;" src="{{medallauser}}" height="24" width="24">
+                </div>                
+                
+            </div>
+            <button (click)="logout()" mat-icon-button style="margin: 0px 1%" matTooltip="Salir">
+                <i class="material-icons">logout</i>
+            </button>
+            
+        </div>
+
+
+    </mat-sidenav>
+
+    <!-- Contenido principal -->
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
+
