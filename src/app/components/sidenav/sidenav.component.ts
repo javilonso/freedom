@@ -70,16 +70,16 @@ export class SidenavComponent implements AfterViewInit {
           }
 
           if (this.mispuntos >= 2000){
-            this.medallauser='/assets/medal4.svg'
+            this.medallauser='../assets/medal4.svg'
           }
           else if(this.mispuntos >=1200 && this.mispuntos<2000){
-              this.medallauser='/assets/medal3.svg'
+              this.medallauser='../assets/medal3.svg'
           }
           else if(this.mispuntos>=600 && this.mispuntos<1200){
-              this.medallauser='/assets/medal2.svg'
+              this.medallauser='../assets/medal2.svg'
           }
           else if(this.mispuntos<600){
-              this.medallauser='/assets/medal1.svg'
+              this.medallauser='../assets/medal1.svg'
           }
       })
 
