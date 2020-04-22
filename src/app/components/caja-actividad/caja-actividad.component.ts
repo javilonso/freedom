@@ -28,28 +28,28 @@ export class CajaActividadComponent implements OnInit {
     this.aux_user = JSON.parse(localStorage.getItem('datauser')).data;
     
     if(this.activity.deporte=="Baloncesto"){
-      this.foto_actividad="../assets/basket.svg"
+      this.foto_actividad="../../../assets/basket.svg"
     }
     else if(this.activity.deporte=="Ciclismo"){
-      this.foto_actividad="../assets/bici.svg"
+      this.foto_actividad="../../../assets/bici.svg"
     }
     else if(this.activity.deporte=="Futbol"){
-      this.foto_actividad="../assets/futbol.svg"
+      this.foto_actividad="../../../assets/futbol.svg"
     }
     else if(this.activity.deporte=="Tenis"){
-      this.foto_actividad="../assets/tenis.svg"
+      this.foto_actividad="../../../assets/tenis.svg"
     }
     else if(this.activity.deporte=="Running"){
-      this.foto_actividad="../assets/run.svg"
+      this.foto_actividad="../../../assets/run.svg"
     }
     else if(this.activity.deporte=="Skate"){
-      this.foto_actividad="../assets/skateboard.svg"
+      this.foto_actividad="../../../assets/skateboard.svg"
     }
     else if(this.activity.deporte=="Trekking"){
-      this.foto_actividad="../assets/trekking.svg"
+      this.foto_actividad="../../../assets/trekking.svg"
     }
     else if(this.activity.deporte=="Patinaje"){
-      this.foto_actividad="../assets/skate.svg"
+      this.foto_actividad="../../../assets/skate.svg"
     }
 
     if(!this.activity.tel_participantes.includes(JSON.parse(localStorage.getItem('datauser')).data.mobilephone)){
