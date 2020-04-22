@@ -22,7 +22,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit() {
-    console.log('User: ', this.user);
     this.authService.SignIn(this.user.email, this.user.password);
     this.dialogRef.close();    
   }
