@@ -138,16 +138,16 @@ export class Basedatos{
     let texto:string;
 
     if (puntos<=599){
-      medalla ="https://svgur.com/i/KM8.svg";
+      medalla ="https://i.imgur.com/z3sSaID.png";
     }
     else if(puntos>599 && puntos<1200){
-      medalla ="https://svgur.com/i/KLw.svg";
+      medalla ="https://i.imgur.com/XuDzgFk.png";
     }
     else if(puntos>1199 && puntos<2000){
-      medalla ="https://svgur.com/i/KL4.svg";
+      medalla ="https://i.imgur.com/XW2NoLu.png";
     }
     else{
-      medalla ="https://svgur.com/i/KM9.svg";
+      medalla ="https://i.imgur.com/GLXCh0R.png";
     }
 
     if (cambio==0){ //bajar puntos

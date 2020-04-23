@@ -1005,7 +1005,7 @@ export const cambioMedalla = functions.https.onRequest((req, res) => {
     const dest_email = data.dest_email;
     const dest_nombre = data.dest_nombre;
     const dest_gif = data.dest_gif;
-    const dest_medalla_foto = data.dest_medalla_foto;
+    const dest_medalla_foto = data.dest_medalla;
     const texto_nivel = data.texto_nivel;
     const dest_puntos= data.dest_puntos;
 
@@ -1164,7 +1164,7 @@ export const cambioMedalla = functions.https.onRequest((req, res) => {
                                 <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Tahoma, sans-serif"><![endif]-->
                                 <div style="color:#555555;font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;line-height:1.2;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;">
                                   <div style="font-size: 14px; line-height: 1.2; color: #555555; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; mso-line-height-alt: 17px;">
-                                    <p style="font-size: 14px; line-height: 1.2; word-break: break-word; text-align: center; mso-line-height-alt: 17px; margin: 0;">Tienes ${dest_puntos} puntos. Tu medalla actual es <strong>Novato</strong></p>
+                                    <p style="font-size: 14px; line-height: 1.2; word-break: break-word; text-align: center; mso-line-height-alt: 17px; margin: 0;">Tienes ${dest_puntos} puntos. Tu medalla actual es: </p>
                                   </div>
                                 </div>
                                 <!--[if mso]></td></tr></table><![endif]-->
