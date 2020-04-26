@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+html, body { height: 100%; }
+* { margin: 0; font-family: 'Abel';}
+
+.container {
+    margin: 20px;
+    display: flex;
+} 
+
+.flex-spacer {
+    flex: 1 1 auto;
+}
+
+.mat-dialog-container {
+    backdrop-filter: blur(13px);
+    background-color: rgba($color: rgb(255, 255, 255), $alpha: 0.9);
+}

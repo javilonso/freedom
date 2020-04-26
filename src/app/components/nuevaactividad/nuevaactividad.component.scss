@@ -1,0 +1,68 @@
+.mycontainer {
+    background-color: rgba(255, 255, 255, 0.63);
+    border-radius: 5px;
+    padding: 3%;
+    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.26);
+  }
+  
+.seccion div{
+    display: inline-block;
+    text-align: center;
+    width:30%;
+}
+.seccion mat-form-field{
+    width:80%;
+}
+#descript {
+    display: inline-block;
+    text-align: center;
+    width:95%;
+    
+}
+#descript mat-form-field{
+    width:80%;
+}
+
+#seccion_botones{
+    margin: auto;
+    width:60%;
+    padding-bottom: 50px;
+    align-items: center;
+    text-align: center;
+
+}
+#seccion_botones button{
+    font-size:120%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    width:75%;
+}
+
+#mymap{
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    padding: 3%;
+    width:25%;
+}
+
+
+@media screen and (max-width:768px)
+{
+    .seccion div{
+        display: inline-block;
+        text-align: center;
+        width:100%;
+    }
+
+    #mymap{
+        width:80%;
+        margin: auto;
+        align-items: center;
+        text-align: center;
+        margin-left: 7%;
+
+    }
+  
+
+} 

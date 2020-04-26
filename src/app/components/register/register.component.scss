@@ -1,0 +1,34 @@
+* {
+    text-align: center;
+}
+
+.seccion div{
+    display: inline-block;
+    text-align: center;
+    width:30%;
+}
+
+.seccion mat-form-field{
+    width:80%;
+}
+
+#Submit div{
+    width:100%;
+}
+
+#Submit button{
+    font-size:100%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    width: 40%;
+}
+
+
+@media screen and (max-width:768px)
+{
+    .seccion div{
+        display: inline-block;
+        text-align: center;
+        width:100%;
+    }
+}

@@ -1,0 +1,23 @@
+<div *ngIf="unirse()">
+    <h1 mat-dialog-title>
+      Confirmación:
+    </h1>
+    
+    <div mat-dialog-content>
+      <p>{{data}}</p>
+    </div>
+    
+    
+    <div mat-dialog-actions>
+      <div class="flex-spacer"></div>
+
+      <button *ngIf="congrat()" mat-button (click)="onDismiss()" [disabled]="isDisable" >No</button>
+        &nbsp;&nbsp;
+      <mat-spinner-button *ngIf="congrat()" (click)="onConfirm()"
+      [options]="spinnerButtonOptions"
+      (btnClick)="someFunc()">
+        </mat-spinner-button>
+
+    </div>
+  </div>
+  
