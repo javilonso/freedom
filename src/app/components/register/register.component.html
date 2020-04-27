@@ -1,0 +1,96 @@
+<div class="displayTable">
+  <div class="displayTableCell">
+
+    <div class="authBlock">
+
+      <mat-toolbar color="primary">
+       Crear cuenta
+      <span class="flex-spacer"></span>
+      <button mat-button mat-dialog-close>&times;</button>
+    </mat-toolbar>
+    <br>
+
+    <form novalidate #loginForm="ngForm">
+            <div class="seccion" #UserData>
+              <div>
+                <h3>Nombre de Usuario</h3>
+                <mat-form-field  appearance="fill">
+                  <input matInput placeholder="Paco7" style="font-size: medium;" type="text" [(ngModel)]="myusername" name="username" #email="ngModel" required>
+                </mat-form-field>
+              </div>
+              <div>
+                <h3>Email address</h3>
+                <mat-form-field  appearance="fill">
+                  <input matInput placeholder="paco@gmail.com" style="font-size: medium;" type="text" [(ngModel)]="myemail" name="email" #email="ngModel" required>
+                </mat-form-field>
+              </div>
+              <div>
+                <h3>Contraseña</h3>
+                <mat-form-field appearance="fill">
+                  <mat-label>Tu contraseña</mat-label>
+                  <input matInput style="font-size: medium;" type="password" [(ngModel)]="password" name="password" #email="ngModel" required>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="seccion" #PersonalData>
+              <div>
+                <h3>Nombre Completo</h3>
+                <mat-form-field appearance="fill">
+                  <mat-label>Tu nombre</mat-label>
+                  <input matInput placeholder="Paco García" style="font-size: medium;" type="text" [(ngModel)]="displayName" name="displayName" #email="ngModel" required>
+                </mat-form-field>
+              </div>
+              <div>
+                <h3>Fecha de Nacimiento</h3>
+                <mat-form-field appearance="fill">
+                  <mat-label>DD/MM/AAAA</mat-label>
+
+                  <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker" [(ngModel)]='birthday' name="cumple" required>
+                    <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+                    <mat-datepicker [startAt]="startDate" #picker></mat-datepicker>
+
+                </mat-form-field>
+              </div>
+              <div>
+                <h3>Ciudad de Residencia</h3>
+                <mat-form-field appearance="fill">
+                  <mat-label>Tu ciudad</mat-label>
+                  <input matInput placeholder="Madrid" style="font-size: medium;" type="text" [(ngModel)]="city" name="city" #email="ngModel" required>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="seccion" #SensitiveData>
+              <div>
+                <h3>Número de Teléfono Móvil</h3>
+                <mat-form-field appearance="fill">
+                  <mat-label>Tu número</mat-label>
+                  
+                  <input matInput placeholder="XXXXXXXXX" style="font-size: medium;" type="text" [(ngModel)]="mobilephone" name="mobilephone" 
+                      #email="ngModel" pattern="^\(?[\d]{3}\)?[\d]{3}[\s-]?[\d]{3}$" required>
+                </mat-form-field>
+              </div>
+              <div>
+                <h3>DNI</h3>
+                <mat-form-field appearance="fill">
+                  <mat-label>Tu DNI</mat-label>
+                  <input matInput placeholder="XXXXXXXXA" style="font-size: medium;" type="text" [(ngModel)]="dni" name="dni" #email="ngModel"  required>
+                </mat-form-field>
+              </div>
+              <div>
+                <h3>Foto de Perfil</h3>
+                <mat-form-field appearance="fill">
+                  <mat-label>URL foto perfil</mat-label>
+                  <input matInput placeholder="www.imgbd.com/photo123.jpg" style="font-size: medium;" type="text" [(ngModel)]="photoURL" name="photoURL" #email="ngModel"  required>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div id="Submit">
+              <button color="primary" type="submit" mat-stroked-button (click)='crearUsuario()' [disabled]="loginForm.form.invalid">Continuar</button>
+            </div>
+    </form>
+    </div>
+
+  </div>
