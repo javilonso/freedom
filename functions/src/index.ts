@@ -16,8 +16,8 @@ const transporter = nodemailer.createTransport({
   secure: true,
   service: 'gmail',
   auth: {
-    user: 'freedomapp2020@gmail.com',
-    pass: 'freedom2020$'
+    user: '<email gmail>',
+    pass: '<password>'
   }
 });
 
